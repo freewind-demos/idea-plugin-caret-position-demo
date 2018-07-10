@@ -32,7 +32,8 @@
 
         <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample menu">
             <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="action.popup" class="actions.HelloAction" text="_Popup" description="Popup a message"/>
+            <action id="action.showCaretPosition" class="actions.ShowCaretPositionAction" text="_Show Caret Position" description="Show caret position of a text file"/>
+            <action id="action.moveCaretToEnd" class="actions.MoveCaretToEndAction" text="_Move Caret to File End" description="Move caret to the end of file"/>
         </group>
 
     </actions>
