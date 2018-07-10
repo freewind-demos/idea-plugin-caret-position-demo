@@ -11,7 +11,7 @@ class HelloAction : AnAction() {
 
     override fun actionPerformed(event: AnActionEvent) {
         (event.project as? ProjectImpl)?.let { project ->
-            val editor = FileEditorManager.getInstance(project)?.selectedEditors?.mapNotNull { it as? TextEditor }?.firstOrNull()
+            val editor = FileEditorManager.getInstance(project)?.selectedEditors?.filterIsInstance<TextEditor>()?.firstOrNull()
             if (editor != null) {
                 val offset = editor.editor.caretModel.offset
                 Messages.showInfoMessage("Caret position: $offset", "Caret Position")
